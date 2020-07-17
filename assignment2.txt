@@ -1,0 +1,14 @@
+Assignment-2
+
+1) Which field of the Customers table is the primary key?
+ANS- CNUM because it is simple and unique.
+
+2) What is the 4th column of the Customers table?
+ANS- RATING.
+
+3) What is another word for row? For column?
+ANS- ROW-entity,tuple,Opprtunity.
+     COLUMN-attribute,method,applet,matrix.
+
+4) Why isn’t it possible to see the first five rows of a table?
+ANS- Because Rows are not stored sequentially in Data Base server HD, Rows are fragmented all over DB harddisk.Thats why rows will always appear according to assending order of address.
