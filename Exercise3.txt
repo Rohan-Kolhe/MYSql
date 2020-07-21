@@ -1,0 +1,28 @@
+Exercise3
+1. Display all the Supplier names with the initial letter capital.?
+Ans Select concat(upper(substr(Sname,1,1)),lower(substr(city,2))) from S;
+
+2. Display all the Supplier names in upper case.
+Ans Select Sname upper(Sname) from s;
+
+3. Display all the Supplier names in lower case.
+Ans Select Sname lower(Sname) from s;
+
+4. Display all the Supplier names padded to 25 characters, with spaces on the left.
+Ans select lpad(Cname,25,' ') from CUSTOMERS;
+
+5. Display all the Supplier names (with ‘la’ replaced by ‘ro’)?
+Ans Select replace(Sname,'la','ro') from S;
+
+6. Implement the above command such that ‘l’ is replaced with ‘r’ and ‘a’ is replaced
+with ‘o’.?
+Ans Select translate(Sname,'la','ro') from S;
+
+7. Display the Supplier names and the lengths of the names.?
+Ans Select Sname, length(Sname) as "Length of name" from S;
+
+8. Use the soundex function to search for a supplier by the name of ‘BLOKE'?
+Ans Select Sname from S where Soundex(Sname) = Soundex('BLOKE');
+
+9. Display the Supplier name and the status (as Ten, Twenty, Thirty, etc.).?
+Ans   
