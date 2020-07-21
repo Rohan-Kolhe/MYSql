@@ -14,9 +14,9 @@ begins with G ?
 Ans.select min(cname) from CUSTOMERS where cname like 'G%' order by cname;
 
 5) Write a query that selects the highest rating in each city?
-Ans.
+Ans.Select city'max(rating) from customer group by city
 
 6) Write a query that counts the number of salespeople registering orders for each
 day. (If a salesperson has more than one order on a given day, he or she should be
 counted only once.).?
-Ans.
+Ans.select Odate,count(distinct Snum) from orders group by Odate ;
