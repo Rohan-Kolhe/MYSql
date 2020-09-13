@@ -9,16 +9,17 @@ as Select cname, Sum (amt) Sum_Amt from Orders, Customers
 where Orders.cnum=Customers.cnum Group by cname;
 #3
 Create view Thirdorders
-as Select * from Dailyorders where odate=’1990-10-03’;
+as Select * from Dailyorders where odate=â€™1990-10-03â€™;
 #4
 Create view Nullcities
 as Select snum, sname, city
 from Salespeople where city is NULL
-OR sname BETWEEN ‘A’ and ‘MZ’;
+OR sname BETWEEN â€˜Aâ€™ and â€˜MZâ€™;
 Ans.#1 and #4 are updatable. Views with joins and with distinct are not       updatable.
 
 2) Create a view of the Salespeople table called Commissions. This view will include only the snum and comm fields. Through this view, someone could enter or change commissions, but only to values between .10 and .20.
 Ans.CREATE VIEW commission AS SELECT snum, comm FROM salespeople WHERE comm BETWEEN .10 AND .20;
 
-3) Some SQL implementations have a built-in constant representing the current date, sometimes called “CURDATE” or “SYSDATE”. The word SYSDATE can therefore be used in a SQL statement, and be replaced by the current date when the value is accessed by commands such as Select or Insert. We will use a view of the Orders table called Entryorders to insert rows into the Orders table. Create the Orders table, so that SYSDATE is automatically inserted for odate if no value is given. Then create the Entryorders view so that no values can be given.
+3) Some SQL implementations have a built-in constant representing the current date, sometimes called â€œCURDATEâ€ or â€œSYSDATEâ€. The word SYSDATE can therefore be used in a SQL statement, and be replaced by the current date when the value is accessed by commands such as Select or Insert. We will use a view of the Orders table called Entryorders to insert rows into the Orders table. Create the Orders table, so that SYSDATE is automatically inserted for odate if no value is given. Then create the Entryorders view so that no values can be given.
 Ans.
+temp
